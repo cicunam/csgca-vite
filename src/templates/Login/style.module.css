@@ -1,0 +1,41 @@
+/*
+  APW
+  Plantillas
+  Login Login (Pantalla de Login)
+  Estilos en cascada (CSS)
+  Raúl Salinas <raul.teo.salinas@cic.unam.mx>
+*/
+
+.container {
+
+  display: flex;
+  flex-direction: row;
+  background: var(--color-white);
+  height: 100vh;
+  
+
+}
+
+.columnProductInfo{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to left,var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  box-shadow: 5px 0 80px var(--color-primary-dark);
+  /* background: radial-gradient(circle at bottom left, var(--color-primary-dark) , var(--color-primary) , var(--color-primary-dark), var(--color-primary), var(--color-primary-dark), var(--color-primary),var(--color-primary-dark)); */
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+  gap: 25px
+
+}
+
+.columnLoginForm{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+

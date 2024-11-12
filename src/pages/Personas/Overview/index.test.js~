@@ -1,0 +1,42 @@
+// APW
+// Páginas
+// Personas (Overview) - Pruebas
+// José Esteva <josesteva@cic.unam.mx>
+
+import { render } from '@testing-library/react';
+import { Context } from '../../index';
+
+import Overview from './index';
+
+// Mock useOverview
+jest.mock('../../../hooks/overview', () => ({
+  __esModule: true,
+  default: (query, defaultFilter) => {
+    return {
+      records: null,
+      pages: null,
+      selectPage: jest.fn()
+    }
+  },
+}));
+
+// Mock useOverview
+jest.mock('../../../hooks/actions', () => ({
+  __esModule: true,
+  default: (section) => {
+    return {
+      createNew: jest.fn(),
+      showDetail: jest.fn()
+    }
+  },
+}));
+
+test('Personas <Overview/>', () => {
+
+    render(
+      <Context.Provider value={ context, setContext }>
+        <Overview/>
+      </Context.Provider>
+    );
+
+});

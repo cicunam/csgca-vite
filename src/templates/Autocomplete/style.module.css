@@ -1,0 +1,53 @@
+/*
+  APW
+  Plantillas
+  Autocomplete (Buscar sugerencias en catálogos grandes)
+  Estilos en cascada (CSS)
+  José Esteva <josesteva@cic.unam.mx>
+*/
+
+.container {
+
+  position: relative;
+
+  /* display: flex;
+  flex-direction: column;
+  align-hints: flex-start;
+  gap: 4px; */
+
+  width: 100%;
+
+}
+
+.hints {
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+
+  overflow-y: scroll;
+
+  background: var(--color-white);
+
+  z-index: 100;
+  width: 100%;
+
+  border: 1.5px solid var(--color-neutral-dark);
+
+  list-style-type: none;
+
+}
+
+.hint {
+
+  padding: 2px 8px;
+
+}
+
+.hint:hover {
+
+  background: var(--color-secondary-light);
+
+}

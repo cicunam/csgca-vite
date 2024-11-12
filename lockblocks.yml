@@ -1,0 +1,31 @@
+# APW
+# Actualización de productos
+
+# Consultar la sintaxis en: https://www.npmjs.com/package/lockblocks#documentation
+
+renameFiles: []
+replaceFiles: []
+fillFiles:
+  - src/templates
+  - src/utils
+deleteFiles: []
+excludePaths:
+  - .deleted
+  - .git
+  - .lockblocks
+  - node_modules
+  - README.md
+  - src/templates/styleguide.stories.mdx
+updateJson:
+  - path: package.json
+    root:
+      fill: true
+    updateFields:
+      - key: scripts
+        merge: true
+      - key: dependencies
+        merge: true
+      - key: devDependencies
+        merge: true
+updateYaml: []
+log: .log/lockblocks.log

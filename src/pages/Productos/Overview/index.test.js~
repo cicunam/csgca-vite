@@ -1,0 +1,35 @@
+// APW
+// Páginas
+// Productos (Overview) - Pruebas
+// José Esteva <josesteva@cic.unam.mx>
+
+import { render } from '@testing-library/react';
+
+import { Context } from '../../index';
+
+import Overview from './index';
+
+// Mock useOverview
+jest.mock('../../../hooks/overview', () => ({
+  __esModule: true,
+  default: (section, query) => {
+    return {
+      records: null,
+      pages: null,
+      changePage: jest.fn(),
+      handleCreate: jest.fn(),
+      handleShow: jest.fn()
+    }
+  },
+}));
+
+test('Productos <Overview/>', () => {
+
+    const size = { width: 0, height: 0 };
+    render(
+      <Context.Provider value={ context, setContext }>
+        <Overview/>
+      </Context.Provider>
+    );
+
+});

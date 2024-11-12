@@ -1,0 +1,32 @@
+# APW
+# Integración continua
+# Actualización de productos creados a partir de la arquitectura
+
+dependents:
+  - "*"
+
+additional: # Por ahora es necesario listar aquí los repositorios que se va n a actualizar
+  - "test"
+
+files:
+
+  # Excluir
+  - "!.deleted"
+  - "!.github"
+  - "!.storybook"
+  - "!node_modules"
+  - "!model"
+  - "!.env"
+  - "!.gitignore"
+  - "!.npmrc"
+  - "!package-lock.json"
+  - "!package.json"
+  - "!README.md"
+
+  # Incluir
+  - "!src"
+  - "src/index.js"              # Aplicación temporal
+  - "src/style.css"             # Estilos globales
+  - "src/utils.js"              # Utilerias
+  - "src/pages/index.js"        # Plantilla
+  - "src/hooks/**/*.js"         # Mecanismos

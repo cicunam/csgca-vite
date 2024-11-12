@@ -1,0 +1,52 @@
+/*
+  APW
+  Páginas
+  Personas (Detail) - Estilos
+  José Esteva <josesteva@cic.unam.mx>
+*/
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+
+}
+
+.header {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 72px;
+  padding-left: var(--space-large);
+  background: var(--color-secondary-light);
+
+}
+
+.content {
+
+  flex: 1;
+
+  padding: 16px;
+  background: var(--color-white);
+
+  overflow: auto;
+
+}
+
+/* @media only screen and (max-width: 512px) {
+
+  .header {
+    justify-content: center;
+    flex-basis: 100%;
+  }
+
+  .commands {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+} */

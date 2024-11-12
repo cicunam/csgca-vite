@@ -1,0 +1,42 @@
+{
+  "name": "@cicunam/apw",
+  "version": "2.0.2",
+  "description": "Arquitectura de los productos web",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cicunam/apw.git"
+  },
+  "author": "José Esteva <josesteva@cic.unam.mx>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "apwpgrade": "git clone -q git@github.com:cicunam/apw.git ./.lockblocks && lockblocks ./.lockblocks . --verbose && rm -rf .lockblocks && npm i"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@cicunam/sd": "^2.2.2",
+    "graphql": "^16.9.0",
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "lockblocks": "^1.1.10",
+    "vite": "^5.4.8",
+    "vite-plugin-svgr": "^4.2.0"
+  }
+}

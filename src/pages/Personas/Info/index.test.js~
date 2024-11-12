@@ -1,0 +1,18 @@
+// APW
+// Pruebas
+// Personas (Info)
+// José Esteva <josesteva@cic.unam.mx>
+
+import { render } from '@testing-library/react';
+
+import { Context } from '../../index';
+
+import Info from './index';
+
+test('Personas <Info/>', () => {
+  render(
+    <Context.Provider value={ context, setContext }>
+      <Info/>
+    </Context.Provider>
+  );
+});

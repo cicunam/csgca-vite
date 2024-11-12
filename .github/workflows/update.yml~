@@ -1,0 +1,18 @@
+# APW
+# Integración continua
+# Difundir cambios a los productos
+
+name: Difundir a los productos los cambios realizados
+on:
+  release:
+    types: [published]
+jobs:
+  template-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # important!
+      - uses: ahmadnassri/action-template-repository-sync@v2
+        with:
+          github-token: ${{ secrets.CIC_GITHUB_TOKEN }}
+          config:  .github/update-config.yml
+          # dry-run: true

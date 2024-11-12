@@ -1,0 +1,90 @@
+<!--
+  SD
+  Documentación
+  Autocomplete (Buscar sugerencias en catálogos grandes)
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+
+import Autocomplete from './index';
+
+<Meta
+  title="Plantillas/Autocomplete"
+  component={Autocomplete}
+  decorators={[ withDesign ]}
+  parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/aMTaEcAMnVhrSs8xegTXZV/Plantillas?type=design&node-id=415%3A828&mode=dev' }}}
+/>
+
+export const items = [
+  {
+    id: '1',
+    correo: 'Etiqueta que coincide'
+  },{
+    id: '2',
+    correo: 'Etiqueta que coincide'
+  },{
+    id: '3',
+    correo: 'Etiqueta que coincide'
+  },{
+    id: '4',
+    correo: 'Etiqueta que coincide'
+  },{
+    id: '5',
+    correo: 'Etiqueta que coincide'
+  }
+];
+
+export const addItem = tr => {
+  console.log('Se agrega un nuevo elemento a la lista');
+}
+
+export const deleteItem = tr => {
+  console.log('Se elimina el usuario con ID: ' + tr.dataset.id);
+}
+
+# Autocomplete (Autocompletea editable)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/9FwznsOcIH6241RfxINp06/Plantillas?type=design&node-id=5%3A801&mode=design&t=EPuUvgTDeeapVtYJ-1' }}}
+    argTypes={{
+      addItem: {
+        name: 'addItem',
+        type: { name: 'function', required: false },
+        description: 'Función para agregar un elemento a la lista',
+        control: null
+      },
+      deleteItem: {
+        name: 'deleteItem',
+        type: { name: 'function', required: false },
+        description: 'Función para eliminar un elemento de la lista',
+        control: null
+      },
+      disabled: {
+        name: 'disabled',
+        type: { name: 'boolean', required: false },
+        description: 'Habilitar/Deshabilitar los controles de la lista',
+        control: null
+      }
+    }}
+    args={{
+      addItem,
+      deleteItem,
+      disabled: false
+    }}
+  >
+    { (args) => (
+      <Autocomplete {...args} />
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Componente"/>

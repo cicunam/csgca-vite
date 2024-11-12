@@ -1,0 +1,50 @@
+{
+  "company": {
+    "name": "CIC-Sistemas",
+    "slogan": "Por mi raza hablará el espíritu",
+    "email": "sistemas@cic.unam.mx"
+  },
+  "product": {
+    "nickname": "APW",
+    "name": "Arquitectura de los Productos Web",
+    "version": "2.0",
+    "license": "MIT",
+    "code": "https://github.com/cicunam/apw",
+    "api": "https://api.cic.unam.mx/metadatos"
+  },
+  "pages": [
+    {
+      "icon": "user",
+      "label": "Personas",
+      "summary": "Lista de usuarios",
+      "module" : "Personas",
+      "components": ["Overview", "Detail", "Info"],
+      "route": "/personas",
+      "filter": {},
+      "page": 1,
+      "item": true
+    },{
+      "icon": "desktop",
+      "label": "Productos",
+      "summary": "Catálogo de productos",
+      "module" : "Productos",
+      "components": ["Overview", "Detail", "Info"],
+      "route": "/productos",
+      "filter": {},
+      "page": 1,
+      "item": true
+    }
+  ],
+  "currentPage": {
+    "icon": "",
+    "label": "",
+    "summary": "",
+    "module" : "",
+    "components": [],
+    "route": "/",
+    "filter": {},
+    "page": 1
+  },
+  "window": { "width": 0, "height": 0, "cards": 12 },
+  "isLoggedIn": false
+}

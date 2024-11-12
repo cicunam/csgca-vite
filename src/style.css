@@ -1,0 +1,57 @@
+/*
+  APW
+  Estilos
+  Interfaz gráfica
+*/
+
+/* [lock:global] */
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+#root {
+
+  /* overflow-y: hidden; */
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+}
+
+main {
+
+  /* NOTA: Sólo puede haber un elemento <main> en toda la aplicación */
+
+  container-type: inline-size;
+
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+
+  padding: 0px;
+  background: var(--color-white);
+
+}
+
+.layout {
+
+  /* NOTA: Cuando utilicemos CSS Grid para definier la estructura de la aplicación este elemento ya no será necesario. */
+
+  display: flex;
+  flex-direction: row;
+
+  flex-grow: 1;
+
+  /* height: 50vh */
+
+}
+
+/* [/lock:global] */

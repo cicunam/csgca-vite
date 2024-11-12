@@ -1,0 +1,29 @@
+# APW
+# Integración continua
+# Publicar la prueba de concepto
+
+name: Publicar la prueba de concepto
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@cicunam'
+    - run: npm install --legacy-peer-deps && CI= npm run build
+      env:
+        CIC_GITHUB_TOKEN: ${{ secrets.CIC_GITHUB_TOKEN }}
+    - uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.CIC_71_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: "132.248.31.71"
+          REMOTE_USER: "josesteva"
+          TARGET: "/var/www/html/apw"
